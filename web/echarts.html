@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>犹太人的全球影响力与相关争议 - 犹太人口分布</title>
+    <!-- 引入ECharts库 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #555;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #777;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 28px;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        main p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+
+        /* 图表容器样式 */
+        #main {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 杰出犹太人内容区域样式 */
+     .content-section {
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+            flex-direction: row-reverse; /* 让图片在文字右边，水平排列反向 */
+            align-items: flex-start; /* 顶部对齐 */
+        }
+
+        /* 各分类标题样式 */
+     .content-section h3 {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* 无序列表样式 */
+     .content-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* 列表项样式 */
+     .content-section li {
+            margin-bottom: 10px;
+            padding: 5px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        /* 最后一个列表项去除底部边框 */
+     .content-section li:last-child {
+            border-bottom: none;
+        }
+
+        /* 图片样式 */
+     .content-section img {
+      width: 50%; /* 设置固定宽度，可根据需求调整 */
+    height: 50%; /* 设置固定高度，可根据需求调整，这里示例设置为比原来大的值以实现拉伸效果 */
+    object-fit: cover; /* 让图片按比例拉伸填满设置的宽高区域，如果图片宽高比与设置的不同，会裁剪部分内容以填满 */
+    margin-top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>犹太人的全球影响力与相关争议</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="table.html">反犹太主义统计</a></li>
+            <li><a href="text.html">应对争议举措</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>犹太人口分布</h2>
+        <!-- 为ECharts图表准备一个具备大小（宽高）的DOM容器 -->
+        <div id="main">
+            <script>
+                // 基于准备好的dom，初始化echarts实例
+                var myChart = echarts.init(document.getElementById('main'));
+
+                // 定义图表的配置项和数据
+                var option = {
+                    title: {
+                        text: '全球犹太人口主要分布国家（截至2024年）',
+                        left: 'center',
+                        textStyle: {
+                          fontSize: 20,
+                          fontWeight: 'bold',
+                          color: '#333'
+                        },
+                      },
+                    tooltip: {},
+                    xAxis: {
+                        data: ['以色列', '美国', '法国', '加拿大', '英国', '阿根廷', '俄罗斯', '德国', '澳大利亚', '巴西']
+                    },
+                    yAxis: {},
+                    series: [
+                        {
+                            name: '犹太人口数量（万）',
+                            type: 'bar',
+                            data: [694.3, 600, 55, 39, 29, 18, 15, 12, 10, 5]
+                        }
+                    ]
+                };
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            </script>
+        </div>
+        <div class="content-section">
+            <img src="1.jpg" alt="相关图片描述"> <!-- 添加图片 -->
+            <div>
+                <h3>杰出的犹太人</h3>
+                <h4>科学与技术</h4>
+                <ul>
+                    <li>阿尔伯特·爱因斯坦（Albert Einstein）：相对论创始人之一。</li>
+                    <li>理查德·费曼（Richard Feynman）：量子电动力学奠基人。</li>
+                    <li>约翰·冯·诺伊曼（John von Neumann）：现代计算机体系结构的奠基人。</li>
+                </ul>
+                <h4>文学与哲学</h4>
+                <ul>
+                    <li>弗兰茨·卡夫卡（Franz Kafka）：存在主义与荒诞文学的代表。</li>
+                    <li>巴鲁赫·斯宾诺莎（Baruch Spinoza）：现代哲学的奠基者之一。</li>
+                    <li>卡尔·马克思（Karl Marx）：共产主义理论的创始人之一。</li>
+                </ul>
+                <h4>艺术与娱乐</h>
+                <ul>
+                    <li>斯蒂文·斯皮尔伯格（Steven Spielberg）：著名导演。</li>
+                    <li>娜塔莉·波特曼（Natalie Portman）：奥斯卡获奖演员。</li>
+                    <li>鲍勃·迪伦（Bob Dylan）：诺贝尔文学奖得主，音乐家。</li>
+                </ul>
+                <h4>经济与商业</h4>
+                <ul>
+                    <li>梅耶·罗斯柴尔德（Mayer Rothschild）：罗斯柴尔德银行的创始人。</li>
+                    <li>谷歌的创始人之一谢尔盖·布林（Sergey Brin）。</li>
+                    <li>Facebook的创始人马克·扎克伯格（Mark Zuckerberg）。</li>
+                </ul>
+                <h4>经济与商业</h4>
+                <ul>
+                    <li>本杰明·迪斯雷利（Benjamin Disraeli）：英国首位犹太裔首相。</li>
+                    <li>戴维·本·古里安（David Ben-Gurion）：以色列建国总理。</li>
+                    <li>露丝·巴德·金斯伯格（Ruth Bader Ginsburg）：美国最高法院大法官，推动性别平等。</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 犹太人相关信息展示. All rights reserved.
+    </footer>
+</body>
+
+</html>
