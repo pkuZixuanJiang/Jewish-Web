@@ -7,7 +7,6 @@
 
 为了方便不熟悉代码的用户，大家只需将项目文件夹下载到本地后双击start即可运行。
 
-具体的项目介绍可参见 作品介绍.pdf
-
+具体的项目介绍可参见 作品介绍.pdf，或观看对应介绍视频 https://www.bilibili.com/video/BV1eRBQYrEsy/
 ![image](https://github.com/user-attachments/assets/a8e5944a-82f9-409a-abce-47f4947cff38)
 
